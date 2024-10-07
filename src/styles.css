@@ -1,0 +1,39 @@
+/* responsive.css */
+/* styles.css */
+
+* {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  body {
+    background-color: #f9f9f9; /* Set your background color */
+    font-family: Arial, sans-serif; /* Set font family */
+  }
+  
+  main {
+    padding: 20px; /* Adjust as necessary */
+  }
+  
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center content */
+    padding: 15px; /* Padding for spacing */
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    h1, h2, h3 {
+      font-size: 1.5rem; /* Adjust heading sizes */
+    }
+  
+    p {
+      font-size: 1rem; /* Adjust paragraph font size */
+    }
+  }
+  

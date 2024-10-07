@@ -1,18 +1,23 @@
+/* Global styles for the App */
 .App {
   text-align: center;
+  padding: 20px;
 }
 
+/* App Logo styles */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Animation for the logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* App Header styling */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,14 +25,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); /* Responsive font sizing */
   color: white;
+  padding: 20px; /* Added padding for spacing */
 }
 
+/* Link styles */
 .App-link {
   color: #61dafb;
 }
 
+/* Keyframes for logo animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +44,40 @@
     transform: rotate(360deg);
   }
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Adjust font size for tablets */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .App-logo {
+    height: 30vmin; /* Smaller logo on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin); /* Adjust font size for mobile devices */
+    padding: 10px; /* Further reduce padding for mobile */
+  }
+
+  .App-logo {
+    height: 25vmin; /* Even smaller logo on mobile */
+  }
+}
+/* Global image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+

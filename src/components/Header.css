@@ -1,0 +1,101 @@
+/* Base Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #282c34;
+  color: white;
+  width: 100%;
+  position: relative;
+  z-index: 10; /* Ensure header stays above content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Left Side (Title) */
+.left-side .portfolio-title {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Right Side (Navigation) */
+.right-side nav {
+  position: relative;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease; /* Smooth transition for mobile menu */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Nav Link Styles */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #61dafb; /* Soft hover color */
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Overlay (for mobile) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 5; /* Below the header */
+  display: none; /* Hidden by default */
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show the menu icon on mobile */
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden off-screen */
+    height: 100vh;
+    width: 250px;
+    background-color: #282c34;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    transition: right 0.3s ease; /* Slide-in effect */
+  }
+
+  .nav-list.active {
+    right: 0; /* Slide into view */
+  }
+
+  .nav-link {
+    font-size: 1.5rem; /* Larger text for mobile */
+    margin-bottom: 20px;
+  }
+}
